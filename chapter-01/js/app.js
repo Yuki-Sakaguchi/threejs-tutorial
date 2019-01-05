@@ -71,7 +71,7 @@ scene.add(sphere)
  * 描画する関数
  */
 function rendererScene () {
-  requerstAnimationFrame(rendererScene)
+  requestAnimationFrame(rendererScene)
   renderer.render(scene, camera)
 }
 
