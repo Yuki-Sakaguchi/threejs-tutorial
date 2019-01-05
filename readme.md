@@ -1,5 +1,9 @@
 # 初めてのThree.js
 写経して勉強する
 
+## 参考
+* [Three.js](https://github.com/mrdoob/three.js)
+* [state.js](https://github.com/mrdoob/stats.js)
+
 # DEMO
-[Chapter-01](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-01/)
+* [Chapter-01](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-01/)
