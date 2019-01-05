@@ -2,6 +2,12 @@
  * Chapter-01 - Basic skeleton
  */
 
+// アニメーションで使う変数
+let step = 0
+
+// ステータス
+const stats = initStats() // FPSを表示する
+
 // シーン
 const scene = new THREE.Scene()
 
@@ -71,10 +77,32 @@ scene.add(sphere)
  * 描画する関数
  */
 function rendererScene () {
-  requestAnimationFrame(rendererScene)
-  renderer.render(scene, camera)
+  stats.update() // FPSのステータスを更新
+
+  // 立方体を回転
+  cube.rotation.x += controls.rotationSpeed
+  cube.rotation.y += controls.rotationSpeed
+  cube.rotation.z += controls.rotationSpeed
+
+  // 球を移動
+  step += controls.bounsingSpeed
+  sphere.position.x = 20 + (10 * (Math.cos(step)))
+  sphere.position.y = 2 + (10 * (Math.abs(Math.sin(step))))
+
+  requestAnimationFrame(rendererScene) // 再帰的にアニメーション実行
+  renderer.render(scene, camera) // 描画
+}
+
+/**
+ * リサイズ時の表示変更処理
+ */
+function onResize () {
+  camera.aspect = window.innerWidth/window.innerHeight
+  camera.updateProjectionMatrix()
+  renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
 // DOMに追加し、アニメーションを開始
 document.getElementById('WebGL-output').appendChild(renderer.domElement)
+window.addEventListener('resize', onResize)
 rendererScene()
