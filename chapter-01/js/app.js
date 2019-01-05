@@ -102,6 +102,19 @@ function onResize () {
   renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
+/**
+ * Statusを表示する
+ */
+function initStats () {
+  const stats = new Stats()
+  stats.setMode(0)
+  stats.domElement.style.position = 'absolute'
+  stats.domElement.style.left = '0px'
+  stats.domElement.style.top = '0px'
+  document.getElementById('Stats-output').appendChild(stats.domElement)
+  return stats
+}
+
 // DOMに追加し、アニメーションを開始
 document.getElementById('WebGL-output').appendChild(renderer.domElement)
 window.addEventListener('resize', onResize)
