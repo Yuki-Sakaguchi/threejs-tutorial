@@ -1,0 +1,15 @@
+{
+  "name": "threejs-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "server": "python -m SimpleHTTPServer 8080"
+  },
+  "dependencies": {
+    "three": "^0.100.0"
+  }
+}
