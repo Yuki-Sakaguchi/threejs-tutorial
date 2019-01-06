@@ -13,3 +13,4 @@
 * [Chapter-01 - 基本的な記述方法](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-01/)
 * [Chapter-02 - Controllerでオブジェクトを追加、削除、参照](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-02/)
 * [Chapter-02-02 - ジオメトリー一覧](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-02-02/)
+* [Chapter-02-02 - Vector3とFace3でオブジェクトを作る](https://yuki-sakaguchi.github.io/threejs-tutorial/chapter-02-03/)
