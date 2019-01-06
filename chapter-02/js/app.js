@@ -8,7 +8,7 @@ function init () {
   // シーン
   const scene = new THREE.Scene()
   scene.fog = new THREE.Fog(0xffffff, 0.015, 100) // 霧を追加
-  scene.overrideMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff }) // オブジェクトのMaterialを無視して、共通でこっちを使う
+  scene.overrideMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff }) // 各オブジェクトのMaterialを無視して、共通でこっちを使う
 
   // ２次元の平面
   const planeGeometry = new THREE.PlaneGeometry(60, 40, 1, 1)
